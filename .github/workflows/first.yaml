@@ -8,6 +8,13 @@ jobs:
       name: first job 
       runs-on: ubuntu-latest
       steps:
-        - name: command 
-          run: echo  "first job done" 
+        - name: before command 
+          run: ls -la 
+          shell: bash
+          
+        - name: checkout step 
+          uses: actions/checkout@v3
+
+        - name: after command 
+          run: ls -la 
           shell: bash
