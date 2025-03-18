@@ -2,6 +2,9 @@ name: Repository Dispatch
 on: 
   repository_dispatch: 
     types: [test]
+  push:
+    branches:
+      - 'main'
 jobs:
     First-workflow-job:
       name: dispatch job 
