@@ -9,10 +9,9 @@ jobs:
     First-workflow-job:
       name: dispatch job 
       runs-on: ubuntu-latest
+      container:
+          image: node:14.16
       steps:
-        - name: command 
-          run: ls -la 
-          shell: bash
-        - name: command 
-          run: echo 'hi hi'
-          shell: bash
+        - name: testnodeversion
+          run: node -v 
+          
